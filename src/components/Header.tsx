@@ -84,8 +84,7 @@ export const Header: React.FC<Props> = ({
     });
   };
 
-  const shouldShowToggleAllButton =
-    todos.length > 0 && todosInProcess.length === 0;
+  const shouldShowToggleAllButton = !!todos.length && !todosInProcess.length;
 
   return (
     <header className="todoapp__header">
